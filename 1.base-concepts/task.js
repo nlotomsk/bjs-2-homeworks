@@ -4,11 +4,14 @@ function solveEquation(a, b, c) {
   let arr = [];
   let discriminant = (b**2)-4*a*c;
   if (discriminant < 0) {
-    return arr = [];
+    arr = [];
+    return arr;
   } else if (discriminant === 0) {
-    return arr = [-b / (2 * a)];
+    arr = [-b / (2 * a)];
+    return arr;
   } else {
-    return arr = [(-b + Math.sqrt(discriminant) )/(2*a),(-b - Math.sqrt(discriminant) )/(2*a)]
+    arr = [(-b + Math.sqrt(discriminant) )/(2*a),(-b - Math.sqrt(discriminant) )/(2*a)];
+    return arr;
   }
 }
 
@@ -26,6 +29,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     let loanBody = amount - contribution;
     let payment = loanBody * ( percent + ( percent/(((1 + percent)** countMonths) - 1)));
     let totalSum = payment * countMonths;
-    return Number(totalSum.toFixed(2));
+    totalSum = Number(totalSum.toFixed(2))
+    return totalSum;
   }
 }
